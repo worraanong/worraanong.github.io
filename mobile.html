@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Online portfolio of Worraanong Chanchaijak, a software engineer based in Bangkok, Thailand">
+    <meta name="keywords" content="Worraanong Chanchaijak, jtm, jtm bunker, jetaime.dev">
+    <meta name="author" content="Worraanong Chanchaijak">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>jtm bunker</title>
+
+    <link rel="icon" href="images/jtm.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="icons/font/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139026340-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139026340-1');
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <pre id="cmd-style-resume-box" class="text-code">
+            loading...
+        </pre>
+        <!-- <button class="btn">Download</button> -->
+    </div>
+    <script>
+        $(function () {
+            $("#cmd-style-resume-box").load("resources/resume.txt");
+        });
+    </script>
+</body>
+
+</html>
