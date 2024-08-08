@@ -474,7 +474,7 @@
         };
 
         async function getWeather() {
-            const url = 'http://api.weatherapi.com/v1/current.json?key=8064ad0cf5764a0eb3134052240808&q=Bangkok&aqi=yes'
+            const url = 'https://api.weatherapi.com/v1/current.json?key=8064ad0cf5764a0eb3134052240808&q=Bangkok&aqi=yes'
             return await fetch(url)
                 .then(response => {
                     if (!response.ok) {
