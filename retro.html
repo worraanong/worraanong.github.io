@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Online portfolio of Worraanong Chanchaijak, a software engineer based in Bangkok, Thailand">
+    <meta name="keywords" content="Worraanong Chanchaijak, jtm, jtm bunker, jetaime.dev">
+    <meta name="author" content="Worraanong Chanchaijak">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>jtm bunker</title>
+
+    <link rel="icon" href="images/jtm.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="icons/font/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139026340-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139026340-1');
+    </script>
+
+    <style>
+        body{
+            margin: 40px auto;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-align: justify;
+            font-size: 100%;
+            background-color: #333;
+        }
+        
+        #cmd-style-resume-box {
+            padding: 10px;
+            color: #fff;
+            min-width: 660px;
+        }
+
+        .outer {
+            margin: auto;
+            background-color: #333;
+            border-style: solid;
+            border-width: 45px 60px 55px 60px;
+            border-color: #dfdecd;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .inner {
+            height: 480px;
+            border: 8px solid #000;
+
+            overflow-y: scroll;
+        }
+
+        .control {
+            margin: auto;
+            background-color: #dfdecd;
+            height: 32px;
+            width: 560px;
+            border-radius: 2px 2px 90px 90px;
+            border-top: 6px solid #b7b2a4;
+        }
+
+        .neck {
+            margin: auto;
+            background-color: #b7b2a4;
+            height: 40px;
+            width: 360px;
+        }
+
+        .round {
+            float: right;
+            height: 16px;
+            width: 16px;
+            border-radius: 12px;
+            background-color: #dfdecd;
+            margin: 4px 3px;
+        }
+
+        .cap {
+            padding: 0px 16px;
+        }
+
+        .btn-grp {
+            padding-right: 40px;
+        }
+
+        .g-blink {
+            position: absolute;
+            margin-top: 30px;
+            height: 10px;
+            width: 10px;
+            background-color: lime;
+
+            animation: blink-animation 1s steps(5, start) infinite;
+            -webkit-animation: blink-animation 1s steps(5, start) infinite;
+        }
+
+        @keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+
+        @-webkit-keyframes blink-animation {
+            to {
+                visibility: hidden;
+            }
+        }
+
+        .keyboard {
+            width: 900px;
+            height: 30px;
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        .trapezium {
+            margin: auto;
+            border-bottom: 120px solid #dfdecd;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            height: 0;
+            width: 900px;
+            text-align: center;
+        }
+
+        .key {
+            text-align: left;
+            font-size: .5em;
+            height: 24px;
+            width: 34px;
+            margin: 0;
+            border-bottom: 2px solid #dfdecd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">
+            <pre id="cmd-style-resume-box" class="text-code">
+                loading...
+            </pre>
+            <!-- <button class="btn">Download</button> -->
+        </div>
+        <div class="round g-blink"></div>
+    </div>
+    <div class="control">
+        <div class="btn-grp">
+            <button class="round"></button>
+            <button class="round"></button>
+            <button class="round"></button>
+            <button class="round"></button>
+            <button class="round"></button>
+            <button class="round"></button>
+            <button class="round cap"></button>
+        </div>
+
+    </div>
+    <div class="neck">
+    </div>
+    <div class="trapezium">
+        <div class="row" style="margin-top: -12px;">
+            <div class="col-9">
+                <div>
+                    <button class="key">Esc</button>
+                    <button class="key">F1</button>
+                    <button class="key">F2</button>
+                    <button class="key">F3</button>
+                    <button class="key">F4</button>
+                    <button class="key">F5</button>
+                    <button class="key">F6</button>
+                    <button class="key">F7</button>
+                    <button class="key">F8</button>
+                    <button class="key">F9</button>
+                    <button class="key">F10</button>
+                    <button class="key">F11</button>
+                    <button class="key">F12</button>
+                </div>
+                <div>
+                    <button class="key">Tab</button>
+                    <button class="key">Q</button>
+                    <button class="key">W</button>
+                    <button class="key">E</button>
+                    <button class="key">R</button>
+                    <button class="key">T</button>
+                    <button class="key">Y</button>
+                    <button class="key">U</button>
+                    <button class="key">I</button>
+                    <button class="key">O</button>
+                    <button class="key">P</button>
+                    <button class="key">{</button>
+                    <button class="key">}</button>
+                    <button class="key">| </button>
+
+                </div>
+                <div>
+                    <button class="key" style="width: 60px; margin-left: -30px">Caps</button>
+                    <button class="key">A</button>
+                    <button class="key">S</button>
+                    <button class="key">D</button>
+                    <button class="key">F</button>
+                    <button class="key">G</button>
+                    <button class="key">H</button>
+                    <button class="key">J</button>
+                    <button class="key">K</button>
+                    <button class="key">L</button>
+                    <button class="key">:</button>
+                    <button class="key">"</button>
+                    <button class="key" style="width: 86px; margin-right: -30px" >Enter</button>
+                </div>
+                <div>
+                    <button class="key" style="width: 72px; margin-left: -90px">Shift</button>
+                    <button class="key">Z</button>
+                    <button class="key">X</button>
+                    <button class="key">C</button>
+                    <button class="key">V</button>
+                    <button class="key">B</button>
+                    <button class="key">N</button>
+                    <button class="key">M</button>
+                    <button class="key"><</button>
+                    <button class="key">></button>
+                    <button class="key">?</button>
+                    <button class="key" style="width: 72px; margin-right: -30px">Shift</button>
+                </div>
+
+                <div class="row">
+                    <div class="col-8">
+                    <button class="key" style="margin-left: -60px">Ctrl</button>
+                    <button class="key">Fn</button>
+                    <button class="key">Win</button>
+                    <button class="key">Alt</button>
+                    <button class="key" style="width: 210px;">&nbsp;</button>
+                    <button class="key">Alt</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="key">←</button>
+                        <button class="key">↑</button>
+                        <button class="key">↓</button>
+                        <button class="key">→</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-3">
+                <div>
+                    <button class="key" style="margin-left: -20px">Num</button>
+                    <button class="key">/</button>
+                    <button class="key">*</button>
+                    <button class="key">-</button>
+                </div>
+                <div>
+                    <button class="key" >7</button>
+                    <button class="key">8</button>
+                    <button class="key">9</button>
+                    <button class="key">+</button>
+                </div>
+                <div>
+                    <button class="key" style="margin-left: -40px">4</button>
+                    <button class="key">5</button>
+                    <button class="key" style="margin-right: -30px">6</button>
+                </div>
+                <div>
+                    <button class="key" style="margin-left: 20px">1</button>
+                    <button class="key">2</button>
+                    <button class="key">3</button>
+                    <button class="key" style="margin-right: -30px">Enter</button>
+                </div>
+                <div>
+                    <button class="key" style="margin-left: 30px; width: 72px;">0</button>
+                    <button class="key">.</button>
+                    <button class="key" style="margin-right: -40px">Del</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <div class="neck keyboard">
+    </div>
+
+    <script>
+        $(function () {
+            $("#cmd-style-resume-box").load("resources/resume.txt");
+        });
+    </script>
+</body>
+
+</html>

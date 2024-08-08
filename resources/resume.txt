@@ -1,0 +1,140 @@
+
+                             Worraanong Chanchaijak
+
+         Bangkok, Thailand • c.worraanong@gmail.com • (+66) 84 556 9435
+              jetaime.dev • ​linkedin.com/in/worraanong-chanchaijak     
+
+● Looking for a C#.NET software engineer position in a tech-savvy company
+● Ready to challenge in any interesting area of business
+● Hope to make the best use of my existing skills
+
+= KEY COMPETENCIES =============================================================
+
+- More than 4 years of C#.NET software development experience
+- Thorough understanding of data structures and algorithms
+- Familiar with front-end frameworks and javascript libraries
+- Comfortably to work outside current knowledge sets and improve continually
+
+
+= WORK EXPERIENCE ==============================================================
+
+Ko-fi Labs Ltd (Remote Developer)                           April 2020 - current
+Friendly platform for creators to get supports from their fans 
+
+- Improve website core functionalities such as comment and reply system, stream
+  alerts, dashboard and supporter management screen.
+- Create a chat system prototype with Azure SignalR functions   
+
+Technologies: C#.Net MVC, Azure, Vue
+--------------------------------------------------------------------------------
+
+Jetabroad (Thailand) Co.,Ltd.​ (Software engineer)          Dec 2018 - April 2020
+Australia based online travel agency for competitive international airfares
+
+- Work as a team in an agile environment to solve enterprise scale problems
+- Continuously develop and deploy latest features for flight reservation system
+- Declutter complexity of flight combination and rule-based dynamic revenue
+- Deliver efficient code, well-design architecture with future maintainability
+- Design and develop unit test, integration test and performance test
+- Handle exceptions and bumpy user experiences, mitigate issues from third-party
+- Manage and monitor resources on Amazon Web Services via CLI
+- Exchange knowledge and keep learning both business and programming
+
+Technologies: C#.Net MVC, Entity Framework, TypeScript, Powershell
+--------------------------------------------------------------------------------
+
+ReadyPlanet TravelTech Co.,Ltd.​ (Programmer)                 Mar 2017 - Dec 2018
+Leading company in digital marketing for hotel and resort
+
+- Integrate new features to hotel booking engine and administrator website
+- Research direct competitors, recommend suitable technologies, and study UX for
+  designing a new attractive and friendly interface for booking engine
+- Propose and develop instant billings system, an invoicing tool to provide
+  flexibility of charging hotel additional services. Responsible for maintenance, 
+  fix any difficulties, create user manual site, and hold an internal training
+- Track user with Facebook Pixel, Google Analytics, and customer behavior 
+  recording tools to help in remarketing strategy and showing preferred ads
+- Provide summarized beneficial reports to marketing team
+- Customize an online website builder and a mobile application for enterprise
+- Improve former spa reservation system to be mobile-first web application 
+
+Technologies: C#.Net WebForms, DevExpress, JQuery, Html, CSS, SQL, PHP
+--------------------------------------------------------------------------------
+
+QAD Thailand​ (Junior Software Engineer)                           Aug - Feb 2017
+ERP services and solutions company based in California, United States
+
+- Provide supports and technical consults
+- Customize code to fit customers requirements, mostly in automotive and
+  manufacturing industry areas
+- Generate reports such as sales summary and shippings list by due date
+- Solve day to day problems
+- Create a registration system for QAD conference, which can print QR code for 
+  badge, and show live statistics of participants number
+ * All written purely in excel and few lines of java
+
+Technologies: ABL(Progress), ZPL, Reporting Framework, Visual Basic
+
+
+= INTERNSHIP ===================================================================
+
+Tokyo University of Agriculture and Technology​                    Jun - Aug 2015
+Faculty of Engineering, Human Computer Interface laboratory
+
+- Research and develop gesture recognition application via electromyogram signal
+  processing with MYO armband
+
+Technologies: C#, Unity3D
+
+
+= EDUCATION BACKGROUND =========================================================
+
+Mahidol University Bachelor of Science                               2012 - 2016
+Salaya campus, Faculty of Information and Communication Technology
+
+Major Software Engineering
+International program, GPA: 3.56 (First-class Honors)
+
+Activities:
+- Receive Certificate of Achievement in recognition for representing the faculty
+  in National Academic Competition and core value “Blogger”
+- Hold learning activities for Junior camp in Database and Software app. track
+- Assist lecturer in preparatory program for Multimedia track and Computer track
+- Facilitate university events e.g. MU Guide, MU to be camp, Rak Nong, and
+  WE MAHIDOL. Both ceremonial and recreational activities
+- Secretary of student president committee batch#10
+
+--------------------------------------------------------------------------------
+
+Samsenwittayalai School 
+Mathematics - Science program, GPA: 3.60                             2009 - 2011
+Gifted program, GPA: 3.99                                            2006 - 2008
+
+Activities:
+- Yearbook president club representative
+- Art director team of Thai arts performance club
+- Staff of Cyber technology club
+
+--------------------------------------------------------------------------------
+
+Language 
+
+● English    IELTS Band 7  Feb 2021    TOEIC 830    Jan 2015
+● Japanese   JLPT N5       Dec 2011
+
+
+= SCHOLARSHIP ==================================================================
+
+Feb 2019 Practical AI development bootcamp from ​Thai programmer association
+Jun 2015 JASSO scholarship grant for internship in Japan
+    2013 Half-tuition waiver from ​faculty of ICT for one semester
+
+
+= AWARDS =======================================================================
+
+Oct 2019 Finalist IoT (Smart NodeMCU) Thai FSTT contest
+Apr 2018 Finalist of Education Disruption Hackathon [Make It Happen]
+Mar 2016 Honorable mention award in Entertainment category from NSC#18 [INK]
+Jan 2016 Honorable mention team from Big Idea: Design competition of
+         Microsoft Imagine Cup Worldwide in game category [INK]
+Apr 2015 Honorable mention for TGO Animation Infographic Contest [Pandarian]
