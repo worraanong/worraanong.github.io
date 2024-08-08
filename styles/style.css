@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+h1 {
+    font-weight: 700;
+}
+h3 {
+    margin-bottom: 0;
+}
+
+
+.text-code{
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+.badge {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Fira Sans", sans-serif;
+    color: #79838c;
+}
+a {
+    color: #50585f;
+    text-decoration: none;
+}
+a:hover {
+    color: #383e44;
+    text-decoration: none;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.title [class^="flaticon-"]:before {
+    font-size: 5em;
+    padding-right: 15px;
+}
+.title h2 {
+    margin: 0;
+}
+
+div.header {
+    height: auto;
+    text-align: center;
+    background: slategrey;
+    color: ghostwhite;
+    padding: 2.3rem 1rem 2.3rem 1rem;
+    position: relative;
+}
+
+div.item {
+    display: flex;
+    flex: auto;
+    overflow-y: auto;
+    padding: 0em 1em;
+}
+
+#timeline {
+    position: relative;
+    display: table;
+    height: 100%;
+    margin: auto 5px;
+}
+
+#timeline > div:after {
+    content: "";
+    width: 2px;
+    position: absolute;
+    top: 0.5em;
+    bottom: 0;
+    left: 60px;
+    z-index: 1;
+    background: #c5c5c5;
+}
+#timeline h3 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5em;
+    color: #888;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+section.year {
+    position: relative;
+}
+
+section.year:first-child section {
+    margin-top: -1.3em;
+    padding-bottom: 0px;
+}
+#timeline section {
+    position: relative;
+}
+
+#timeline section ul {
+    list-style-type: none;
+    padding: 0 0 20px 75px;
+    margin: -1.35rem 0 1em;
+    font-size: 1em;
+}
+#timeline section ul :first-of-type:after {
+    content: "";
+    width: 15px;
+    height: 10px;
+    background: #c5c5c5;
+    border: 2px solid #ffffff;
+    position: absolute;
+    left: 54px;
+    top: 3px;
+    z-index: 2;
+}
+#timeline section ul li {
+    margin-left: 0.5em;
+}
+#timeline section ul li:before {
+    content: "·";
+    margin-left: -0.5em;
+    padding-right: 0.3em;
+}
+#timeline section ul li:not(:first-child) {
+    margin-top: 0.5em;
+}
+
+.tab-content{
+    border: #dee2e6 solid 1px;
+    border-top: none;
+}
+
+.tab-pane{
+    padding: 24px 18px;
+    min-height: 160px;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+.fullpage-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ffe682;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.navbar-toggler {
+    padding: 0;
+    border: none;
+}
+
+svg {
+    width: 100vw;
+    height: 300px;
+}
+
+footer {
+    color: "#ffe682";
+}
+.conversation {
+    margin-top: -300px;;
+    position: absolute;
+}
+.speech-bubble {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0.4em;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+    width: 300px;
+}
+
+.speech-bubble:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 14px solid transparent;
+    border-bottom-color: #ffffff;
+    border-top: 0;
+    margin-left: -14px;
+    margin-top: -14px;
+}
+.row {
+    margin-bottom: 2em;
+}
+.card {
+    margin-bottom: 2em;
+    height: 100%;
+}
+
+@media (min-width: 1281px) {
+    .conversation {
+        position: relative;
+    }
+
+    .speech-bubble:after {
+        left: 0;
+        top: 50%;
+        border-bottom-color: transparent;
+        border-right-color: #ffffff;
+        border-left: 0;
+    }
+    iframe {
+        height: 315px;
+    }
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-tabs {
+    width: 100%;
+}
