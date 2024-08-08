@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6LMHQKTWW"></script>
@@ -11,26 +12,63 @@
         gtag('config', 'G-H6LMHQKTWW');
     </script>
 </head>
+
 <body>
 
-Worraanong Chanchaijak
-<a class="nav-link" href="/retro.html">Resume</a>
-<a class="nav-link" href="/mobile.html">Mobile</a>
-<script>
-    const weather = 'http://api.weatherapi.com/v1/current.json?key=8064ad0cf5764a0eb3134052240808&q=Bangkok&aqi=yes'
-    fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('trouble with network response');
-    }
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-</script>
+    Worraanong Chanchaijak
+    <a class="nav-link" href="/retro.html">Resume</a>
+    <a class="nav-link" href="/mobile.html">Mobile</a>
+    <pre id="d-weather" style="display: none;">Loading weather...</pre>
+  
+<div id="w-weather" style="visibility: hidden">
+    <p id="w-temp"></p>
+    Feels like <span id="w-feels"></span>°C
+    <p id="w-condition"></p>
+    <img id="w-icon" src="">
+<div>
+    <script>
+
+        window.onload = async function () {
+            let weather = await getWeather();
+            if (weather){
+                displayWeather(weather);
+            }
+        };
+
+        async function getWeather() {
+            const url = 'http://api.weatherapi.com/v1/current.json?key=8064ad0cf5764a0eb3134052240808&q=Bangkok&aqi=yes'
+            return await fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        console.log('~Trouble getting weather API response');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    return data.current;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function displayWeather(weather){
+            const debug = document.getElementById('d-weather');
+            const widget = document.getElementById('w-weather');
+            const temp = document.getElementById('w-temp');
+            const feels = document.getElementById('w-feels');
+            const cond = document.getElementById('w-condition');
+            const icon = document.getElementById('w-icon');
+
+            debug.textContent = JSON.stringify(weather, null, 2);
+            temp.innerHTML = weather.temp_c;
+            feels.innerHTML = weather.feelslike_c;
+            cond.innerHTML = weather.condition.text;
+            icon.src = `https://${weather.condition.icon}`;
+            widget.style.visibility = "visible";
+        }
+
+    </script>
 </body>
+
 </html>
