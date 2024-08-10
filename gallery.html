@@ -32,23 +32,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <style>
-        .row>.column {
-            padding: 0 8px;
-        }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Create four equal columns that floats next to eachother */
-        .column {
+        .thumbnail{
             float: left;
-            width: 25%;
         }
 
-        /* The Modal (background) */
+        .thumbnail>img {
+            height: 420px;
+            object-fit: contain;
+        }
+        .thumbnail>img:hover {
+            filter: grayscale(100%);
+
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -64,34 +60,41 @@
         /* Modal Content */
         .modal-content {
             position: relative;
-            background-color: #fefefe;
+            height: 100%;
             margin: auto;
             padding: 0;
-            width: 90%;
-            max-width: 1200px;
+            background-color: transparent;
         }
 
-        /* The Close Button */
-        .close {
+        /* The dismiss Button */
+        .dismiss {
             color: white;
             position: absolute;
             top: 10px;
             right: 25px;
             font-size: 35px;
             font-weight: bold;
+            z-index: 1
         }
 
-        .close:hover,
-        .close:focus {
+        .dismiss:hover,
+        .dismiss:focus {
             color: #999;
             text-decoration: none;
             cursor: pointer;
         }
 
         /* Hide the slides by default */
-        .mySlides {
+        .slides {
             display: none;
         }
+
+        .slide-wrappper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
 
         /* Next & previous buttons */
         .prev,
@@ -132,23 +135,6 @@
             top: 0;
         }
 
-        /* Caption text */
-        .caption-container {
-            text-align: center;
-            background-color: black;
-            padding: 2px 16px;
-            color: white;
-        }
-
-        img.demo {
-            opacity: 0.6;
-        }
-
-        .active,
-        .demo:hover {
-            opacity: 1;
-        }
-
         img.hover-shadow {
             transition: 0.3s;
         }
@@ -160,49 +146,63 @@
 </head>
 
 <body>
-
+    <h1>Gallery</h1>
+    <h2>Photos I snapped</h2>
     <div id="app">
-        <div class="row">
-            <div v-for="n in 4" class="column">
-                <img v-bind:src="'images/gallery/Bangkok/' + n + '.webp'" class="hover-shadow" @click="openModal(n)" />
+        <template>
+            <div ref="el">
+                Swipe here
+            </div>
+        </template>
+
+
+        <div v-for="album in albums" class="album">
+            <div v-for="n in album.total" class="thumbnail">
+                <img v-bind:src="'images/gallery/'+album.title+'/' + n + '.webp'" class="hover-shadow" @click="openModal(n)"/>
             </div>
         </div>
 
-        <div id="myModal" class="modal">
-            <span class="close cursor" @click="closeModal">&times;</span>
+        <div id="lightbox" class="modal" @keyup.left="shiftSlides(-1)">
+            <span class="dismiss cursor" @click="dismissModal">&times;</span>
             <div class="modal-content">
-                <div v-for="n in 4">
-                    <div class="mySlides">
+                <div class="slide-wrappper" v-for="n in 4">
+                    <div class="slides">
                         <div class="numbertext">{{n}} / 4</div>
-                        <img v-bind:src="'images/gallery/Bangkok/' + n + '.webp'" style="width:100%">
+                        <img v-bind:src="'images/gallery/Bangkok/' + n + '.webp'">
                     </div>
                 </div>
-                <a class="prev" @click="shiftSlides(-1)">&#10094;</a>
-                <a class="next" @click="shiftSlides(1)">&#10095;</a>
+                <span class="prev" @click="shiftSlides(-1)">&#10094;</span>
+                <span class="next" @click="shiftSlides(1)">&#10095;</span>
             </div>
 
         </div>
     </div>
 
+    <script>
+
+
+    </script>
     <script type="module">
         import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-
         createApp({
             setup() {
+
+
             },
             data() {
-                return { 
-                    slideIndex: 1, 
+                return {
+                    slideIndex: 1,
                     slides: [],
+                    albums: [{title:"Bangkok", total:4}, {title:"Osaka", total:8}],
                 }
             },
             methods: {
                 openModal(n) {
-                    document.getElementById("myModal").style.display = "block";
+                    document.getElementById("lightbox").style.display = "block";
                     this.showSlides(this.slideIndex = n);
                 },
-                closeModal() {
-                    document.getElementById("myModal").style.display = "none";
+                dismissModal() {
+                    document.getElementById("lightbox").style.display = "none";
                 },
                 showSlides(n) {
                     if (n > this.slides.length) { this.slideIndex = 1 }
@@ -210,14 +210,30 @@
                     for (let i = 0; i < this.slides.length; i++) {
                         this.slides[i].style.display = "none";
                     }
-                    this.slides[this.slideIndex - 1].style.display = "block";
+                    this.slides[this.slideIndex - 1].style.display = "flex";
                 },
                 shiftSlides(n) {
                     this.showSlides(this.slideIndex += n);
                 },
+
             },
-            mounted(){
-                this.slides = document.getElementsByClassName("mySlides");
+            mounted() {
+                this.slides = document.getElementsByClassName("slides");
+
+                window.addEventListener("keyup", (e) => {
+                    const callback = {
+                        "ArrowLeft": () => this.shiftSlides(-1),
+                        "ArrowRight": () => this.shiftSlides(1),
+                        //"ArrowUp"    : () => console.log(''),
+                        // "ArrowDown"  : downHandler,
+                        "Escape": () => this.dismissModal(),
+                    }[e.key];
+
+                    callback?.();
+                });
+
+
+
             },
         }).mount('#app')
 
