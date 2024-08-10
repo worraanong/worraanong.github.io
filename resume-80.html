@@ -328,23 +328,17 @@
                     <button class="key" style="margin-right: -40px">Del</button>
                 </div>
             </div>
-
-
-
         </div>
-
-
-
-
 
     </div>
     <div class="neck keyboard">
     </div>
 
     <script>
-        $(function () {
-            $("#cmd-style-resume-box").load("resources/resume.txt");
-        });
+        window.onload = async function () {
+            const resume = document.getElementById('cmd-style-resume-box');
+            resume.load("resources/resume.txt");
+        };
     </script>
 </body>
 
