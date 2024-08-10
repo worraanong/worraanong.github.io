@@ -32,17 +32,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <style>
-        .thumbnail{
+        .thumbnail {
             float: left;
         }
 
         .thumbnail>img {
-            height: 420px;
+            max-height: 66.6vw;
+            max-width: 100vw;
             object-fit: contain;
         }
+
         .thumbnail>img:hover {
             filter: grayscale(100%);
-
         }
 
         .modal {
@@ -89,6 +90,10 @@
             display: none;
         }
 
+        .slides>img {
+            max-width: 100vw;
+        }
+
         .slide-wrappper {
             display: flex;
             justify-content: center;
@@ -129,9 +134,8 @@
         /* Number text (1/3 etc) */
         .numbertext {
             color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
+            font-size: 14px;
+            padding: 24px 12px;
             top: 0;
         }
 
@@ -141,6 +145,18 @@
 
         .hover-shadow:hover {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .caption{
+            padding: 24px 12px;
+        }
+
+
+        @media (min-width: 600px) {
+            .thumbnail>img {
+            max-height: 33vw;
+            max-width: 49.9vw;
+        }
         }
     </style>
 </head>
@@ -158,19 +174,23 @@
 
         <div v-for="album in albums" class="album">
             <div v-for="n in album.total" class="thumbnail">
-                <img v-bind:src="'images/gallery/'+album.title+'/' + n + '.webp'" class="hover-shadow" @click="openModal(n)"/>
+                <img v-bind:src="'images/gallery/'+album.title+'/' + n + '.webp'" class="hover-shadow"
+                    @click="openModal(n)" />
             </div>
         </div>
 
-        <div id="lightbox" class="modal" @keyup.left="shiftSlides(-1)">
+        <div id="lightbox" class="modal">
             <span class="dismiss cursor" @click="dismissModal">&times;</span>
             <div class="modal-content">
-                <div class="slide-wrappper" v-for="n in 4">
+                <div v-for="album in albums">
+                <div class="slide-wrappper" v-for="n in album.total">
                     <div class="slides">
-                        <div class="numbertext">{{n}} / 4</div>
-                        <img v-bind:src="'images/gallery/Bangkok/' + n + '.webp'">
+                        <div class="numbertext">{{n}} / {{album.total}}</div>
+                        <img v-bind:src="'images/gallery/'+album.title+'/' + n + '.webp'">
+                        <p class="caption">{{album.title}}</p>
                     </div>
                 </div>
+            </div>
                 <span class="prev" @click="shiftSlides(-1)">&#10094;</span>
                 <span class="next" @click="shiftSlides(1)">&#10095;</span>
             </div>
@@ -193,7 +213,7 @@
                 return {
                     slideIndex: 1,
                     slides: [],
-                    albums: [{title:"Bangkok", total:4}, {title:"Osaka", total:8}],
+                    albums: [{ title: "Bangkok", total: 4 }, { title: "Osaka", total: 8 }],
                 }
             },
             methods: {
@@ -210,7 +230,7 @@
                     for (let i = 0; i < this.slides.length; i++) {
                         this.slides[i].style.display = "none";
                     }
-                    this.slides[this.slideIndex - 1].style.display = "flex";
+                    this.slides[this.slideIndex - 1].style.display = "block";
                 },
                 shiftSlides(n) {
                     this.showSlides(this.slideIndex += n);
