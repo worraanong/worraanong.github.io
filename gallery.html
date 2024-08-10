@@ -16,8 +16,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="icons/font/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6LMHQKTWW"></script>
@@ -28,8 +26,6 @@
 
         gtag('config', 'G-H6LMHQKTWW');
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <style>
         .thumbnail {
@@ -192,7 +188,7 @@
         <div v-for="(album, index) in albums" class="album">
             <div v-for="n in album.total" class="thumbnail">
                 <img v-bind:src="'images/gallery/'+album.title+'/' + n + '.webp'" class="hover-shadow"
-                    @click="openModal(index, n)" loading="lazy" />
+                    @click="openModal(index, n)" loading="lazy" v-bind:alt="album.title"/>
             </div>
         </div>
 
